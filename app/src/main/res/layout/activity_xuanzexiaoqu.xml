@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    <LinearLayout
+        android:id="@+id/xuanze"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:visibility="visible">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <RelativeLayout
+                android:id="@+id/ib_menjinjilu_fanghui"
+                android:layout_width="0dp"
+                android:layout_height="42dp"
+                android:layout_gravity="center"
+                android:layout_weight="0.9">
+
+                <ImageView
+                    android:layout_width="10dp"
+                    android:layout_height="20dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:background="@drawable/e_btn_join"
+                    android:paddingTop="7dp" />
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/select_xiaoqu_title"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="42dp"
+                android:layout_weight="7"
+                android:gravity="center"
+                android:text="选择小区"
+                android:textColor="#333333"
+                android:textSize="20sp" />
+
+        </LinearLayout>
+        <!--<View-->
+            <!--android:background="#989898"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="0.5dp"/>-->
+        <ListView
+            android:id="@+id/lv_xuanzexiaoqu"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="visible">
+        </ListView>
+
+    </LinearLayout>
+
+
+
+
+
+</LinearLayout>

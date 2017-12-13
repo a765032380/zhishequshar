@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="100dp"
+    android:orientation="horizontal"
+    android:background="@drawable/e_bg_frame">
+    <TextView
+        android:id="@+id/tv_shangquan"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:textColor="#323232"
+        android:text="商圈001"
+        android:layout_marginTop="25dp"
+        android:layout_marginLeft="20dp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="right"
+        android:layout_marginRight="20dp">
+        <TextView
+        android:id="@+id/tv_shangquanlirun"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="30sp"
+            android:textColor="#216cff"
+        android:text="120"
+        android:layout_marginTop="25dp"
+        android:layout_marginLeft="20dp"/>
+        <TextView
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="12sp"
+            android:textColor="#216cff"
+            android:text="本月商圈总利润(元)"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="20dp"/>
+
+
+    </LinearLayout>
+
+</LinearLayout>

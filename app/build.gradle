@@ -1,0 +1,61 @@
+apply plugin: 'com.android.application'
+apply plugin: 'android-apt'
+android {
+    compileSdkVersion 26
+    buildToolsVersion "26.0.1"
+    defaultConfig {
+        applicationId "com.bjxiyangshar.myapplication"
+        minSdkVersion 15
+        targetSdkVersion 26
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        packagingOptions {
+            exclude "lib/x86/librealm-jni.so"
+            exclude "lib/mips/librealm-jni.so"
+            exclude "lib/armeabi/librealm-jni.so"
+            exclude "lib/arm64-v8a/librealm-jni.so"
+            exclude "lib/x86_64/librealm-jni.so"
+            exclude "lib/armeabi-v7a/librealm-jni.so"
+        }
+        ndk {
+            //选择要添加的对应cpu类型的.so库。
+            abiFilters 'armeabi', 'armeabi-v7a', 'arm64-v8a','x86', 'x86_64', 'mips', 'mips64'
+            // 还可以添加 'x86', 'x86_64', 'mips', 'mips64'
+        }
+
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+repositories {
+    maven { url "https://jitpack.io" }
+}
+
+dependencies {
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+    androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+    compile 'com.android.support:appcompat-v7:26.+'
+    compile 'com.android.support.constraint:constraint-layout:1.0.2'
+    testCompile 'junit:junit:4.12'
+    compile project(path: ':myapplication')
+    compile project(path: ':imoocsdk')
+    //注解框架
+    compile 'com.jakewharton:butterknife:8.5.1'
+    apt 'com.jakewharton:butterknife-compiler:8.5.1'
+    //滑动返回的依赖
+    compile 'me.imid.swipebacklayout.lib:library:1.0.0'
+    //GSON
+    compile 'com.google.code.gson:gson:2.8.0'
+    //折线图
+    compile 'com.github.PhilJay:MPAndroidChart:v2.1.6'
+    compile 'com.android.support:recyclerview-v7:26.0.+'
+    //鲁班的依赖，用于图片压缩
+    compile 'top.zibin:Luban:1.1.2'
+}

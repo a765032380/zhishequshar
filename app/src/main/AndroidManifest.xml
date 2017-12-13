@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.bjxiyangshar.myapplication">
+
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+    <uses-permission android:name="android.permission.INTERNET"/>
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/logo"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:name=".app.GuardApplication"
+        android:theme="@style/AppTheme">
+        <activity android:name=".MainActivity">
+
+        </activity>
+        <activity android:name=".activity.SDLoginActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".activity.HomeActivty">
+
+        </activity>
+        <activity
+            android:name=".activity.SelectShangQuanActivity"
+            android:theme="@style/otherPageStyle">
+        </activity>
+        <activity
+            android:name=".activity.XinZengTongJiActivity"
+            android:theme="@style/otherPageStyle">
+        </activity>
+        <activity
+            android:name=".activity.GeRenZhongXinActivity"
+            android:theme="@style/otherPageStyle">
+        </activity>
+        <activity
+            android:name=".activity.LiShiZhangDanActivity"
+            android:theme="@style/otherPageStyle">
+        </activity>
+        <activity
+            android:name=".activity.LiShiZhangDanXiangQingActivity"
+            android:theme="@style/otherPageStyle">
+        </activity>
+        <activity
+            android:name=".activity.AddShangJiaXinXiActivity"
+            android:theme="@style/otherPageStyle">
+        </activity>
+        <activity
+            android:name=".activity.AddShangJiaXinXiNextActivity"
+            android:theme="@style/otherPageStyle">
+        </activity>
+        <activity
+            android:name=".activity.XuanZeXiaoQuActivity"
+            android:theme="@style/otherPageStyle">
+        </activity>
+        <activity
+            android:name=".activity.SheZhiActivity"
+            android:theme="@style/otherPageStyle">
+        </activity>
+        <activity
+            android:name=".activity.FuWuTiaoKuanActivity"
+            android:theme="@style/otherPageStyle">
+        </activity>
+        <activity
+            android:name=".activity.GuanYuWoMenActivity"
+            android:theme="@style/otherPageStyle">
+        </activity>
+        <activity
+            android:name=".activity.MyXinXiActivity"
+            android:theme="@style/otherPageStyle">
+        </activity>
+        <activity
+            android:name=".activity.XiuGaiNameActivity"
+            android:theme="@style/otherPageStyle">
+        </activity>
+
+
+
+
+        <service android:name=".update.service.UpdateService"/>
+    </application>
+
+</manifest>
